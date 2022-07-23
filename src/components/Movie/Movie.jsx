@@ -1,5 +1,19 @@
-import classes from './Movie.module.css'
-const Movie = ({data:movie}) => {
+import { useContext } from "react";
+import MovieContext from "../../store/MovieContext";
+import classes from "./Movie.module.css";
+const Movie = ({ data: movie }) => {
+  const ctx = useContext(MovieContext);
+
+  console.log(ctx);
+  const isFavorite = ctx.favoriteMovies.find(id => id===movie.id)
+  console.log(isFavorite);
+  const addToFavoriteHandler = () => {
+    ctx.addFavoriteMovies(movie.id)
+  };
+  const removeToFavoriteHandler = () => {
+    ctx.removeFavorites(movie.id)
+  }
+
   return (
     <article className={classes.container}>
       <section>
@@ -15,7 +29,8 @@ const Movie = ({data:movie}) => {
         <h6>{movie.similarMovies}</h6>
       </section>
       <div>
-        <button>Add to Favorite</button>
+        {isFavorite && <button onClick={removeToFavoriteHandler}>Remove from Favorite</button>}
+        {!isFavorite && <button onClick={addToFavoriteHandler}>Add to Favorite</button>}
       </div>
     </article>
   );
