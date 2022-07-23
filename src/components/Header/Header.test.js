@@ -2,34 +2,29 @@ import {render,screen} from '@testing-library/react'
 import { BrowserRouter } from 'react-router-dom';
 import Header from './Header'
 describe('Header Component',() => {
-  test('renders "Advance Medico" heading name', () => {
+  test('renders "Watch Now" heading name', () => {
     render(<BrowserRouter><Header /></BrowserRouter>);
-    const linkElement = screen.getByText(/Advance Medico/);
+    const linkElement = screen.getByText(/Watch Now/);
     expect(linkElement).toBeInTheDocument();
   });
-  test('does not render small case in "advance medico" heading name', () => {
+  test('does not render small case in "watch now" heading name', () => {
     render(<BrowserRouter><Header /></BrowserRouter>);
-    const linkElement = screen.queryByText(/advance medico/);
+    const linkElement = screen.queryByText(/watch now/);
     expect(linkElement).toBeNull();
   });
-  test('renders "Home" Link',() => {
+  test('renders "Movies" Link',() => {
     render(<BrowserRouter><Header /></BrowserRouter>)
-    const homeLinkElement = screen.getByText('Home' , {exact : false})
-    expect(homeLinkElement).toBeInTheDocument();
+    const moviesLinkElement = screen.getByText('Movies' , {exact : false})
+    expect(moviesLinkElement).toBeInTheDocument();
   })
-  test('renders "Add Appointment" Link',() => {
+  test('renders "Add Movie" Link',() => {
     render(<BrowserRouter><Header /></BrowserRouter>)
-    const addAppointmentLinkElement = screen.getByText('Add Appointment' )
-    expect(addAppointmentLinkElement).toBeInTheDocument();
+    const addMovieLinkElement = screen.getByText('Add Movie' )
+    expect(addMovieLinkElement).toBeInTheDocument();
   })
-  test('renders "Appointments" Link',() => {
+  test('renders "Favorites" Link',() => {
     render(<BrowserRouter><Header /></BrowserRouter>)
-    const appointmentsLinkElement = screen.getByText('Appointments' )
-    expect(appointmentsLinkElement).toBeInTheDocument();
-  })
-  test('renders "User" Link',() => {
-    render(<BrowserRouter><Header /></BrowserRouter>)
-    const userLinkElement = screen.getByText('User' )
-    expect(userLinkElement).toBeInTheDocument();
+    const favoritesLinkElement = screen.getByText('Favorites' )
+    expect(favoritesLinkElement).toBeInTheDocument();
   })
 })

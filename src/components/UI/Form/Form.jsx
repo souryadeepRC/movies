@@ -34,7 +34,7 @@ const Form = (props) => {
         })}
       </div>
       <div className={classes.btn__container}>
-        <button disabled={!isFormValid} ype="submit">Save</button>
+        <button disabled={!isFormValid} ype="submit">{props.submitButton}</button>
       </div>
     </form>
   );

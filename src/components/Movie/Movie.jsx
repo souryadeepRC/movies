@@ -3,10 +3,7 @@ import MovieContext from "../../store/MovieContext";
 import classes from "./Movie.module.css";
 const Movie = ({ data: movie }) => {
   const ctx = useContext(MovieContext);
-
-  console.log(ctx);
   const isFavorite = ctx.favoriteMovies.find(id => id===movie.id)
-  console.log(isFavorite);
   const addToFavoriteHandler = () => {
     ctx.addFavoriteMovies(movie.id)
   };
