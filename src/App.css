@@ -2,7 +2,7 @@
   font-family: Tahoma;
 }
 
-p {
+p,h1,h2,h3,h4,h5,h6 {
   margin: 0;
 }
 input::-webkit-inner-spin-button,
@@ -19,9 +19,16 @@ button{
   background: #3e5227;
   color: snow;
   cursor: pointer;
+  transition: 0.75s;
 }
-
+button:disabled{
+  cursor: not-allowed;
+  background: lightgray !important;
+}
 button:hover{
-  transform: scale(1.05);
+  transform: scale(1.025);
   background: #566e39;
+}
+.text-center{
+  text-align: center;
 }

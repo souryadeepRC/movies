@@ -4,10 +4,15 @@
     flex-wrap: wrap;
     gap: 20px;
     justify-content: space-around;
-    align-items: center;
+    align-items: stretch;
+    padding: 25px 0;
 }
 @media screen and (min-width:450px){
     .container{
         flex-direction: row;
     }
+}
+.empty__list{
+    text-align: center;
+    padding-top: 10px;
 }

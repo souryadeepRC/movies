@@ -1,3 +1,11 @@
 .container{
     width: 17rem;
+    background: #dbf5be;
+    padding: 15px 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.container section{
+    padding: 6px 0;
 }

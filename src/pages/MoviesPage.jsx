@@ -9,7 +9,6 @@ const MoviesPage = (props) => {
   console.log(ctx);
     return (
         <>
-        <h6>Movies Page</h6>
         <Movies movies={ctx.movies}/>
         </>
     )

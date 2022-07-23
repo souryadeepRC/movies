@@ -16,17 +16,17 @@ const Movie = ({ data: movie }) => {
 
   return (
     <article className={classes.container}>
-      <section>
+      <section className={classes.movie__title}>
         <h2>{movie.name}</h2>
         <h6>{movie.description}</h6>
       </section>
       <section>
-        <h2>{movie.genre}</h2>
-        <h6>{movie.language}</h6>
+        <p>{movie.genre}</p>
+        <p>{movie.language}</p>
       </section>
       <section>
-        <h2>{movie.cast}</h2>
-        <h6>{movie.similarMovies}</h6>
+        <p>{movie.cast}</p>
+        {movie.similarMovies!=='' && <p><strong>similar Movies : </strong>{movie.similarMovies}</p>}
       </section>
       <div>
         {isFavorite && <button onClick={removeToFavoriteHandler}>Remove from Favorite</button>}

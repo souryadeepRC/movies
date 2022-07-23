@@ -96,8 +96,13 @@ const AddMovie = (props) => {
     (validity, field) => validity && field.action.isValidData,
     true
   );
-  const submitFormHandler = (response) => {
-    console.log(response);
+  const resetFormField = () => {
+    formFieldList.forEach(field => {
+      field.action.onResetHandler();
+    })
+  }
+  const submitFormHandler = () => {
+    console.log();
     console.log(isFormValid);
     console.log(formFieldList);
     props.onSubmit({
@@ -108,7 +113,7 @@ const AddMovie = (props) => {
       genre: formFieldList[4].action.value,
       language: formFieldList[5].action.value,
     });
-    
+    resetFormField();
   };
   return <Form fieldList={formFieldList} onSubmit={submitFormHandler} />;
 };

@@ -11,7 +11,6 @@ const AddMoviePage = () => {
   };
   return (
     <>
-      <h4>Add Movie</h4>
       <AddMovie onSubmit={submitFormHandler}/>
     </>
   );
