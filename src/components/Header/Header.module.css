@@ -1,0 +1,27 @@
+.header__section {
+    background: #3e5227;
+    padding: 18px 5px;
+    color: snow;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+}
+.header__text {
+    width: 80%; 
+    margin: 0;
+}
+.header__icon{
+    width: 20%;
+}
+
+
+@media screen and (min-width:750px) {
+    .header__text {
+        font-size: 20px;
+        width: 40%;
+    } 
+    .header__icon{
+        display: none;
+    }
+}

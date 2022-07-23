@@ -1,0 +1,35 @@
+.header__navigation {
+    display: none;
+}
+
+@media screen and (min-width:750px) {
+    .header__navigation {
+        display: block;
+        width: 80vw;
+    }
+
+    .header__navigation>ul {
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: row;
+        list-style-type: none;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .header__navigation>ul>li {
+        width: 25%;
+        text-align: center;
+    }
+
+    .header__navigation>ul a{
+        color: snow;
+        text-decoration: none;
+    }
+    .selected__link{
+        color: #c6f590 !important;
+    }
+    .header__navigation>ul a:hover{
+        color: #b2dd82;
+    }
+}

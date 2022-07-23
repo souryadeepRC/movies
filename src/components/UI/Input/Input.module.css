@@ -1,0 +1,29 @@
+.input__container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 90%;
+    margin: auto;
+}
+
+@media screen and (min-width:750px) {
+    .input__container{
+        width: 50%;
+    }
+}
+.input__container label{
+    font-size: 14px;
+}
+.error__msg{
+  color: red;  
+  font-size: 12px;
+}
+.input__container input{
+    border: none;
+    border-bottom: 1px solid #3e5227;
+    width: 90%;
+    padding: 12px 0 7px 24px;
+}
+.input__container input:focus-visible{
+    outline: none;
+}

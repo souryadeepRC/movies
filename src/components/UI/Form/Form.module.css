@@ -1,0 +1,36 @@
+.form__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form__container>div {
+    padding: 1rem 0;
+    width: 95%;
+}
+
+.btn__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.btn__container button {
+    width: 70%;
+    margin: 5px 10px;
+    padding: 10px;
+}
+
+@media screen and (min-width:750px) {
+
+    .btn__container {
+        flex-direction: row;
+    }
+
+    .btn__container button {
+        width: 20%;
+    }
+}
