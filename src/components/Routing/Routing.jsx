@@ -3,6 +3,7 @@ import { Redirect, Route, Switch } from 'react-router-dom'
 
 import MoviesPage from '../../pages/MoviesPage';
 import AddMoviePage from '../../pages/AddMoviePage';
+import FavoriteMoviePage from '../../pages/FavoriteMoviePage';
 const Routing = () => {
   return (
     <Switch>
@@ -16,7 +17,7 @@ const Routing = () => {
         <AddMoviePage />
       </Route>
       <Route path="/favorites" exact>
-        {<p>Favorites</p>}
+        <FavoriteMoviePage />
       </Route>
       <Route path="/movies/:movieId">{<p>Movie ID</p>}</Route>
       <Route path="*">{<p>ERROR</p>}</Route>
