@@ -1,0 +1,13 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+    align-items: center;
+}
+@media screen and (min-width:450px){
+    .container{
+        flex-direction: row;
+    }
+}
