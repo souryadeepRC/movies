@@ -1,7 +1,6 @@
 import Input from "../Input/Input";
 import classes from './Form.module.css'
 const Form = (props) => {
-  console.log("Form Invoked",props);
   const submitFormHandler = (event) => {
     event.preventDefault()
     props.onSubmit(true)
